@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:mes="http://www.escop-project.eu/MES.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.escop-project.eu/MES.owl"/>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#KPI_Symbol">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#KPI"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Service">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Metas">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Input">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Device">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Output">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#KPI">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#KPI_Range">
+    <rdfs:subClassOf rdf:resource="http://www.escop-project.eu/MES.owl#KPI"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Function">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Category">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Type">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Rule">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Action">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasMeta">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Metas"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasType">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Type"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasKPIRange">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasKPISymbol">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Symbol"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasRule">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Function"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasAction">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Action"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#isKPI">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#url">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Input"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasService">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Service"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#kpiId">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasKPIChildren">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasCategory">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#formula">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasOutput">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#formulaId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasInput">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Input"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasKPIParent">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#hn">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#nom">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#kpiTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#value">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#nl">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#min">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#hh">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#nn">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#ll">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#KPI_Range"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#max">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#array"/>
+  <mes:KPI_Symbol rdf:about="http://www.escop-project.eu/MES.owl#testBox"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Ontology">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ontology</mes:id>
+  </mes:Category>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#boolean"/>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#double"/>
+  <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#ServiceReply"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Services">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >service</mes:id>
+  </mes:Category>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Process">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >process</mes:id>
+  </mes:Category>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Events">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >event</mes:id>
+  </mes:Category>
+  <mes:KPI_Symbol rdf:about="http://www.escop-project.eu/MES.owl#gauge"/>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#string"/>
+  <mes:KPI_Range rdf:about="http://www.escop-project.eu/MES.owl#default">
+    <mes:nn rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >50</mes:nn>
+    <mes:nl rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >25</mes:nl>
+    <mes:ll rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >0</mes:ll>
+    <mes:hn rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >75</mes:hn>
+    <mes:hh rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+    >100</mes:hh>
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >default</mes:id>
+  </mes:KPI_Range>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#map"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Time">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >time</mes:id>
+  </mes:Category>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#integer"/>
+  <mes:KPI_Symbol rdf:about="http://www.escop-project.eu/MES.owl#trend"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Message">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >message</mes:id>
+  </mes:Category>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Query">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >query</mes:id>
+  </mes:Category>
+  <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#Event"/>
+  <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+  <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#OntologySave"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_ServiceInput">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >serviceInput</mes:id>
+  </mes:Category>
+  <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#long"/>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Value">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</mes:id>
+  </mes:Category>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Cat_Operation">
+    <mes:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >operation</mes:id>
+  </mes:Category>
+</rdf:RDF>

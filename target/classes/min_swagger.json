@@ -1,0 +1,142 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "eScopRTU API",
+    "description": "This is a common description of REST API for all eScop devices. The document\ndescribes eScopRTU API. The other devices like eScop SimpleIO and eScop Service Manager\nuses subset of of functions from this API.\nThe description of the devices and their functions\nis provided in deliverable D3.4 Physical layer specification.\n<BR>\nThe eScopRTU REST API provides for basic resources\n* /data\n* /notifs\n* /events\n* /services\n\nThe */data* resources are used to access the RAW data from the underlying physical device. \nThey are meant for reading and writing directly to the I/Os or control algorithm.\n<BR>\nThe */notifs* (notifications) resource is meant for managing all the subscription for various\nresources on the device. One can find list of all notifications.\n<BR>\nThe content of */events* resource depends on the current device configuration.\nIt provides access to the all evens defined in the services which are running\non the eScopRTU.\n<BR>\nThe */services* resource contains list of available services on the RTU. These\nservices can managed by SERVICE MANAGER. New service can be described e.q. using\nStructured Text Language (STL). Specification of the service description is part \nof the deliverable D3.4 Physical layer specifications.\n",
+    "version": "2.0.0",
+    "x-meta":"___meta___"
+  },
+  "host": "___host___",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "___path___",
+  "paths": {
+    "/events": {
+      "get": {
+        "summary": "Get event list",
+        "description": "Get list of all events",
+        "operationId": "getEvents",
+        "responses": {
+          "200": {
+            "description": "Return NodeInfo object, class notifs were children contains list of events\n",
+            "schema": {
+              "$ref": "#/definitions/NodeInfo"
+            }
+          },
+          "500": {
+            "description": "Getting event list failed due to the server error.",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        }
+      }
+    },
+    "/services": {
+      "get": {
+        "summary": "Get services list",
+        "description": "Get list of all services",
+        "operationId": "getServices",
+        "responses": {
+          "200": {
+            "description": "Return NodeInfo object, class notifs were children contains list of services\n",
+            "schema": {
+              "$ref": "#/definitions/NodeInfo"
+            }
+          },
+          "500": {
+            "description": "Getting services list failed due to the server error.",
+            "schema": {
+              "$ref": "#/definitions/Message"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Message": {
+      "description": "An object response or error message. It is based on the <a href='http://www.restapitutorial.com/'>REST API Tutorial</a>",
+      "required": [
+        "code",
+        "status",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "description": "Contains the HTTP response status code as an integer."
+        },
+        "status": {
+          "enum": [
+            "success",
+            "fail",
+            "error"
+          ],
+          "description": "Contains the text: 'success', 'fail', or 'error'. Where 'fail' is for HTTP status response values from 500-599, 'error' is for statuses 400-499, and 'success' is for everything else (e.g. 1XX, 2XX and 3XX responses)"
+        },
+        "message": {
+          "type": "string",
+          "description": "Only used for 'fail' and 'error' statuses to contain the error message. For internationalization (i18n) purposes, this could contain a message number or code, either alone or contained within delimiters"
+        },
+        "data": {
+          "type": "string",
+          "description": "Contains the response body. In the case of 'error' or 'fail' statuses, this contains the cause, or exception name."
+        }
+      }
+    },
+    "Links": {
+      "description": "An object describing a storage for links",
+      "required": [
+        "self"
+      ],
+      "properties": {
+        "self": {
+          "type": "string",
+          "description": "URL which points to current resource"
+        },
+        "info": {
+          "type": "string",
+          "description": "(Optional) URL which points to info resource"
+        },
+        "notifs": {
+          "type": "string",
+          "description": "(Optional) URL which points to list of notifications for current resource"
+        },
+        "parent": {
+          "type": "string",
+          "description": "(Optional) URL which points to the parent resource"
+        }
+      }
+    },
+    "NodeInfo": {
+      "description": "An object describing a node in a eScopRTU tree",
+      "required": [
+        "id",
+        "links",
+        "class"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID of the node"
+        },
+        "links": {
+          "$ref": "#/definitions/Links",
+          "description": "An object with links, at least with self URL which point to that resource"
+        },
+        "class": {
+          "type": "string",
+          "default": "node",
+          "description": "Class of the current resource."
+        },
+        "children": {
+          "$ref": "#/definitions/NodeInfo",
+          "description": "An array of child nodes, which should contain at least the same information as NodeInfo"
+        }
+      },
+      "discriminator": "id"
+    }
+  }
+}

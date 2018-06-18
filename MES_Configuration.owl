@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:mm="http://www.MM-Framework.eu/MM.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.MM-Framework.eu/MM.owl"/>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Metas">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Rule">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Service">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Category">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Output">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Action">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Input">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Type">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Function">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.MM-Framework.eu/MM.owl#Device">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasService">
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Rule"/>
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Service"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasCategory">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Category"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasRule">
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Function"/>
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasInput">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Input"/>
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasAction">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Action"/>
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.MM-Framework.eu/MM.owl#hasOutput">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Output"/>
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.MM-Framework.eu/MM.owl#hasType">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Type"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.MM-Framework.eu/MM.owl#hasMeta">
+    <rdfs:range rdf:resource="http://www.MM-Framework.eu/MM.owl#Metas"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.MM-Framework.eu/MM.owl#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.MM-Framework.eu/MM.owl#id">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.MM-Framework.eu/MM.owl#value">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.MM-Framework.eu/MM.owl#url">
+    <rdfs:domain rdf:resource="http://www.MM-Framework.eu/MM.owl#Input"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.MM-Framework.eu/MM.owl#formula">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.MM-Framework.eu/MM.owl#formulaId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#double"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Operation">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >operation</mm:id>
+  </mm:Category>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Ontology">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ontology</mm:id>
+  </mm:Category>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Services">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >service</mm:id>
+  </mm:Category>
+  <mm:Action rdf:about="http://www.MM-Framework.eu/MM.owl#ServiceInvoke"/>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#long"/>
+  <mm:Action rdf:about="http://www.MM-Framework.eu/MM.owl#OntologySave"/>
+  <mm:Action rdf:about="http://www.MM-Framework.eu/MM.owl#ServiceReply"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Process">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >process</mm:id>
+  </mm:Category>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_ServiceInput">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >serviceInput</mm:id>
+  </mm:Category>
+  <mm:Action rdf:about="http://www.MM-Framework.eu/MM.owl#Event"/>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#integer"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Message">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >message</mm:id>
+  </mm:Category>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#array"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Value">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >value</mm:id>
+  </mm:Category>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#string"/>
+  <rdf:Description rdf:about="http://www.MM-Framework.eu/MM.owl#default">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >default</mm:id>
+  </rdf:Description>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#map"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Events">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >event</mm:id>
+  </mm:Category>
+  <mm:Type rdf:about="http://www.MM-Framework.eu/MM.owl#boolean"/>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Query">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >query</mm:id>
+  </mm:Category>
+  <mm:Category rdf:about="http://www.MM-Framework.eu/MM.owl#Cat_Time">
+    <mm:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >time</mm:id>
+  </mm:Category>
+</rdf:RDF>

@@ -1,0 +1,1636 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:mes="http://www.escop-project.eu/MES.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.escop-project.eu/MES.owl"/>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Service">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Input">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Output">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Function">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Category">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Type">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Rule">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.escop-project.eu/MES.owl#Action">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasRule">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Function"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasAction">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Action"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasCategory">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasOutput">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Output"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasService">
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Service"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.escop-project.eu/MES.owl#hasInput">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Input"/>
+    <rdfs:domain rdf:resource="http://www.escop-project.eu/MES.owl#Rule"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#hasType">
+    <rdfs:range rdf:resource="http://www.escop-project.eu/MES.owl#Type"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.escop-project.eu/MES.owl#value">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#ID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#formula">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#tag">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.escop-project.eu/MES.owl#unmask">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </owl:DatatypeProperty>
+  <mes:Function rdf:about="http://www.escop-project.eu/MES.owl#Detail_Scheduling">
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_26">
+        <mes:hasService>
+          <mes:Service rdf:about="http://www.escop-project.eu/MES.owl#SER_Maintenance">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >maintenance</mes:ID>
+          </mes:Service>
+        </mes:hasService>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule26</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction>
+          <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+        </mes:hasAction>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_Maintenance">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >maintenance</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType>
+              <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#boolean"/>
+            </mes:hasType>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterLevel">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterLevel</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType>
+              <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#double"/>
+            </mes:hasType>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_25">
+        <mes:hasService>
+          <mes:Service rdf:about="http://www.escop-project.eu/MES.owl#SER_LeakageAlarm">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >leakageAlarm</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+          </mes:Service>
+        </mes:hasService>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule25</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LeakageAlarm">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LeakageAlarm</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_24">
+        <mes:hasService>
+          <mes:Service rdf:about="http://www.escop-project.eu/MES.owl#SER_FilterChange">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChange</mes:ID>
+          </mes:Service>
+        </mes:hasService>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule24</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_23">
+        <mes:hasService>
+          <mes:Service rdf:about="http://www.escop-project.eu/MES.owl#SER_OilChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+          </mes:Service>
+        </mes:hasService>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule23</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_12">
+        <mes:hasService>
+          <mes:Service rdf:about="http://www.escop-project.eu/MES.owl#SER_Start">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >start</mes:ID>
+          </mes:Service>
+        </mes:hasService>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule12</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#ServiceInvoke"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_StartUnit">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >startUnit</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >detailScheduling</mes:ID>
+  </mes:Function>
+  <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilChangeTime">
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >oilChangeTime</mes:ID>
+    <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MES, LubricationUnit</mes:tag>
+    <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></mes:unmask>
+    <mes:hasType>
+      <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#long"/>
+    </mes:hasType>
+  </mes:Input>
+  <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LeakageAlarmTime">
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >leakageAlarmTime</mes:ID>
+    <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MES, LubricationUnit</mes:tag>
+    <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></mes:unmask>
+    <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+  </mes:Input>
+  <mes:Function rdf:about="http://www.escop-project.eu/MES.owl#Resource_Allocation_And_Status">
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_11">
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LuTotalFlow">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >maxOilFlow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasAction>
+          <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#Event"/>
+        </mes:hasAction>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterCapacity">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterCapacity</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentTankLevelStart">
+            <mes:hasType>
+              <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#integer"/>
+            </mes:hasType>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentTankLevelStart</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >90</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >((tank Level &gt; ((percentTankLevelStart/100)* tankCapacity)) &amp;&amp; (filterLevel &gt; ((percentFilterLevelStart/100)* filterCapacity)) &amp;&amp; (luOilAllocated &gt; luTotalFlow))?true:false;</mes:formula>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_TankCapacity">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >tankCapacity</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_StartUnit">
+            <mes:hasCategory>
+              <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Value"/>
+            </mes:hasCategory>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >startUnit</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LuOilAllocated">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilAllocation</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_TankLevel">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >tankLevel</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule11</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentFilterLevelStart">
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentFilterLevelStart</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >90</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >resourceAllocationAndStatus</mes:ID>
+  </mes:Function>
+  <mes:Function rdf:about="http://www.escop-project.eu/MES.owl#Data_Acquisition">
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_27">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >filterLevel</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterLevel">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterLevel</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule27</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction>
+          <mes:Action rdf:about="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        </mes:hasAction>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_32">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >lastFilterChange ?(lastFilterLevel  = filterLevel):lastFilterLevel;</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LastFilterLevel">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastFilterLevel</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule32</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LastFilterChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastFilterChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_35">
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule35</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_SimulationTime">
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >simulationTime</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(start)&amp;&amp;(lastFilterChange)&amp;&amp;(filterLevel &gt; lastFilterLevel)? (filterChangeTime  = simulationTime);</mes:formula>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LastFilterLevel">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastFilterLevel</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_LastFilterChange"/>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterChangeTime">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChangeTime</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_Start">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >start</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_29">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >stop?(lastOilChange = oilChange):(lastOilChange);</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LastOilChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastOilChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule29</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_OilChange"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_Stop">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >stop</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_31">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >stop?(lastFilterChange  = filterChange):(lastFilterChange );</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LastFilterChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastFilterChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule31</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterChange"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_Stop"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_34">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OilChangeTime">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilChangeTime</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LastOilChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastOilChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LastTankLevel">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastTankLevel</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_Start"/>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule34</mes:ID>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(start)&amp;&amp;(lastOilChange)&amp;&amp;(tankLevel &gt;lastTankLevel)? (oilChangeTime = simulationTime);</mes:formula>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_TankLevel"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_SimulationTime"/>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >dataAcquisition</mes:ID>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_28">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >outfFlowLU</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OutFlowLU">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >outFlow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule28</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OutFlowLU">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >outFlow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_30">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >lastOilChange?(lastTankLevel = tankLevel):lastTankLevel;</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LastTankLevel">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastTankLevel</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule30</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterChangeTime">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChangeTime</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_LastOilChange"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_TankLevel"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_33">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >stop?(lastLeakageAlarm  = leakageAlarm):(lastLeakageAlarm);</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LastLeakageAlarm">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastLeakageAlarm</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule33</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_LeakageAlarm"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_Stop"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_36">
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_SimulationTime"/>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(start)&amp;&amp;(lastLeakageAlarm)&amp;&amp;(ocrLU &lt; percentLeak)? (leakageAlarmTime  = simulationTime);</mes:formula>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentLeak">
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >5</mes:value>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentLeak</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule36</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LastLeakageAlarm">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >lastLeakageAlarm</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_Start"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OcrLU">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrLU</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LeakageAlarmTime">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >leakageAlarmTime</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#long"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#OntologySave"/>
+      </mes:Rule>
+    </mes:hasRule>
+  </mes:Function>
+  <mes:Function rdf:about="http://www.escop-project.eu/MES.owl#Maintenance_Management">
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_14">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_ScheduleFilterChange">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >scheduleFilterChange</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = filterChangeTime.length - 1;Time = (simulationTime – filterChangeTime[n])/(1000*60*60*24); time &gt;= avgFilterChange? true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule14</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_AvgFilterChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgFilterChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterChangeTime_Ontology">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChangeTime</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ontology</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType>
+              <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#array"/>
+            </mes:hasType>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_SimulationTime"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_22">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OilLow">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilLow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >tankLevel &lt;= (((percentTankLow)/100)* tankCapacity)?true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule22</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentTankLow">
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentTankLow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >50</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_TankCapacity"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_TankLevel"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_15">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = leakageAlarmTime.length - 1;Time = (simulationTime – leakageAlarmTime[n])/(1000*60*60*24); time &gt;= avgMaintenace? true:false;</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_Maintenance">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >maintenance</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule15</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_AvgMaintenance">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgOilChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LeakageAlarmTime_Ontology">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >leakageAlarmTime</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ontology</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#array"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_SimulationTime"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_38">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(scheduleFilterChange)||(filterLow)? true:false;</mes:formula>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_ScheduleFilterChange">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >scheduleFilterChange</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterLow">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterLow</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule38</mes:ID>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_39">
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_LuLeak">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >luLeak</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule39</mes:ID>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LeakageAlarm">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LeakageAlarm</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_MsLeak">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, MeasuringStation</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >msLeak</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(luLeak)||(msLeak)||(fmLeak)||(pipeLeakMStoFM)||(pipeLeakLUtoMS)? true:false;</mes:formula>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PipeLeakMStoFM">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, MeasuringStation</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >pipeLeakMStoFM</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FmLeak">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, FlowMeter</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >fmLeak</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PipeLeakLUtoMS">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >pipeLeakLUtoMS</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_19">
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_OutFlowLU"/>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >flowPercentage = ((outFlowLU-inFlowMS )/outFlowLU)*100;flowPercentage &gt; leakagePercent?true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule19</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MeasuringStation</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_InFlowMS">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MeasuringStation</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >inFlow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_PipeLeakLUtoMS">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >pipeLeakLUtoMS</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_PercentLeak"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_13">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_ScheduleOilChange">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >scheduleOilChange</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = oilChangeTime.length - 1;Time = (simulationTime – oilChangeTime[n])/(1000*60*60*24); time &gt;= avgOilChange? true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule13</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_AvgOilChange">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgOilChange</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilChangeTime_Ontology">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilChangeTime</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ontology</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#array"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_SimulationTime"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >maintenanceManagement</mes:ID>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_20">
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >FlowMeter</mes:tag>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_PipeLeakMStoFM">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >pipeLeakMStoFM</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule20</mes:ID>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >flowPercentage = ((outFlowMS-inFlowFM)/outFlowMS)*100;flowPercentage &gt; leakagePercent?true:false;</mes:formula>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_InFlowFM">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >FlowMeter</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >inFlow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OutFlowMS">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >outFlow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MeasuringStation</mes:tag>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_PercentLeak"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_18">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FmLeak">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >fmLeak</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ocrFM &gt; leakagePercent?true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule18</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >FlowMeter</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OcrFM">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrFM</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, FlowMeter</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_PercentLeak"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_37">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(oilDirty)||(scheduleOilChange)||(oilLow)? true:false;</mes:formula>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OilChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_ScheduleOilChange">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >scheduleOilChange</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilLow">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilLow</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilDirty">
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilDirty</mes:ID>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule37</mes:ID>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_21">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterLow">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterLow</mes:ID>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >filterLevel &lt;= (((percentFilterLow)/100)* filterCapacity)?true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule21</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterCapacity"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentFilterLow">
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentFilterLow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >10</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_17">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_MsLeak">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >msLeak</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ocrMS &gt; leakagePercent?true:false;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule17</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MeasuringStation</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OcrMS">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrMS</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, MeasuringStation</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_PercentLeak"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_16">
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_LuLeak">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >luLeak</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ocrLU &gt; leakagePercent?true:false; </mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule16</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_OcrLU"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_PercentLeak"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_8">
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >particleCounter == particleQuality?(oilQualityDecayRate &gt;= percentQualityDecay? true: false):false;</mes:formula>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_PercentQualityDecay">
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >percentQualityDecay</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >50</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OilQualityDecayRate">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilQualityDecayRate</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_ParticleQuality">
+            <mes:hasType>
+              <mes:Type rdf:about="http://www.escop-project.eu/MES.owl#string"/>
+            </mes:hasType>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >particleQuality</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Value</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:value rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >25/25/25</mes:value>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OilDirty">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilDirty</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#boolean"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule8</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_ParticleCounter">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >particleCount</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+      </mes:Rule>
+    </mes:hasRule>
+  </mes:Function>
+  <mes:Category rdf:about="http://www.escop-project.eu/MES.owl#Message"/>
+  <mes:Function rdf:about="http://www.escop-project.eu/MES.owl#Performance_Analysis">
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_1">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = filterLevel.length - 1; j = 0; k = 0;n&gt;6?(k=6):(k=n);for (int i =0; i &lt;= k-1; i++) { j += (filterLevel[n-i] - filterLevel[n-(i+1)]); }; j/(k-1);</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule1</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterLevel_Ontology">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterLevel</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ontology</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#array"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterUsage">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterUsage</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_3">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = filterChangeTime.length - 1; j = 0;for (int i =0; i &lt;= n-1; i++) { j += (filterChangeTime[n-i] - filterChangeTime[n-(i+1)]); }; j/(n-1);</mes:formula>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_AvgFilterChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgFilterChange</mes:ID>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule3</mes:ID>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterChangeTime_Ontology"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_9">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = oilChangeTime.length - 1; j = 0;for (int i =0; i &lt;= n-1; i++) { j += (oilChangeTime[n-i] - oilChangeTime[n-(i+1)]); }; j/(n-1);</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_AvgOilChange">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgOilChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule9</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_OilChangeTime_Ontology"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_5">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(inFlowMS-outFlowMS)/inFlowMS;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule5</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MeasuringStation</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_InFlowMS"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_OutFlowMS"/>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OcrMS">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrMS</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_2">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >filterUsage/filterLevel)/(60*24);</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule2</mes:ID>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_FilterUsage">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterUsage</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MES, LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterLevel"/>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_FilterEnd">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >filterEnd</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_4">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = outFlowLU.length - 1; (outFlowLU[n-3]-inFlowLU)/outFlowLU[n-3];</mes:formula>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OcrLU">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrLU</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_Outflow_Ontology">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >outflow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Ontology</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#array"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_InFlowLU">
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >inFlow</mes:ID>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >LubricationUnit</mes:tag>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule4</mes:ID>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >performanceAnalysis</mes:ID>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_7">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = filterChangeTime.length - 1;(((filterChangeTime[1]-filterChangeTime[0])-(filterChangeTime[n]-filterChangeTime[n-1]))/(filterChangeTime[1]-filterChangeTime[0]))*100;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule7</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_FilterChangeTime_Ontology"/>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OilQualityDecayRate">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >oilQualityDecayRate</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_6">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >(inFlowFM-outFlowFM)/inFlowFM;</mes:formula>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule6</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >FlowMeter</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_InFlowFM"/>
+        <mes:hasInput>
+          <mes:Input rdf:about="http://www.escop-project.eu/MES.owl#IN_OutFlowFM">
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >i_xx_xx</mes:unmask>
+            <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >FlowMeter</mes:tag>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >outFlow</mes:ID>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#double"/>
+          </mes:Input>
+        </mes:hasInput>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_OcrFM">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >ocrFM</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+      </mes:Rule>
+    </mes:hasRule>
+    <mes:hasRule>
+      <mes:Rule rdf:about="http://www.escop-project.eu/MES.owl#rule_10">
+        <mes:formula rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >n = leakageAlarmTime.length - 1; j = 0;for (int i =0; i &lt;= n-1; i++) { j += (leakageAlarmTime[n-i] - leakageAlarmTime[n-(i+1)]); }; j/(n-1);n = leakageAlarmTime.length - 1; j = 0;for (int i =0; i &lt;= n-1; i++) { j += (leakageAlarmTime[n-i] - leakageAlarmTime[n-(i+1)]); }; j/(n-1);</mes:formula>
+        <mes:hasOutput>
+          <mes:Output rdf:about="http://www.escop-project.eu/MES.owl#OUT_AvgMaintenance">
+            <mes:hasCategory rdf:resource="http://www.escop-project.eu/MES.owl#Value"/>
+            <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >avgOilChange</mes:ID>
+            <mes:unmask rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            ></mes:unmask>
+            <mes:hasType rdf:resource="http://www.escop-project.eu/MES.owl#integer"/>
+          </mes:Output>
+        </mes:hasOutput>
+        <mes:ID rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >rule10</mes:ID>
+        <mes:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LubricationUnit</mes:tag>
+        <mes:hasAction rdf:resource="http://www.escop-project.eu/MES.owl#Event"/>
+        <mes:hasInput rdf:resource="http://www.escop-project.eu/MES.owl#IN_LeakageAlarmTime_Ontology"/>
+      </mes:Rule>
+    </mes:hasRule>
+  </mes:Function>
+</rdf:RDF>
